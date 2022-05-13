@@ -11,7 +11,7 @@ const Navbar = () => {
                 <li className='nav-item'><a href='/#' >Sobre de</a></li>
                 <li className='nav-item'><a href='/#' >Ubicacion</a></li>
             </ul>
-            <CartWidget></CartWidget>
+            <CartWidget />
         </nav>
     );
 }
