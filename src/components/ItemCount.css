@@ -1,0 +1,30 @@
+.item-count {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.item-container {
+  border: 1px solid #000;
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 0;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.add-on {
+  background-color: #000;
+  color: #fff;
+  display: block;
+  cursor: pointer;
+  padding: 5px 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.increment-btn,
+.decrement-btn {
+  display: block;
+  width: 30px;
+  cursor: pointer;
+}
