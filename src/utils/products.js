@@ -1,4 +1,4 @@
-const products = [
+export const products = [
     {
         id: 1,
         name: 'nombre 1',
@@ -64,7 +64,3 @@ const products = [
         image: 'https://www.pngmart.com/files/7/Sneakers-PNG-Picture.png',
     }
 ]
-
-module.exports = {
-    products,
-}

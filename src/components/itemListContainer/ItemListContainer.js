@@ -1,11 +1,11 @@
 import React from "react";
 
 import ItemList from "./ItemList";
-import ItemCount from "./ItemCount";
+import ItemCount from "../itemCount/ItemCount";
 
 import { useEffect, useState } from "react";
 import promiseFunction from "../../utils/promiseFunction";
-const { products } = require('../../utils/products');
+import { products } from '../../utils/products';
 
 const ItemListContainer = ({ greeting }) => {
 

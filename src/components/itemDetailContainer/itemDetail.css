@@ -1,0 +1,22 @@
+.item {
+  width: 70vw;
+  height: 70vh;
+  margin: 15vh 15vw;
+  border: 1px solid #000;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 0 50px #0003;
+}
+
+.item-img {
+  width: 60%;
+  height: 50%;
+  margin: 0 20%;
+}
+
+.item-count {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -32px;
+}
