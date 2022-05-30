@@ -8,7 +8,7 @@ const ItemList = ({ items }) => {
             {
                 items.length > 0
                     ? items.map(item =>
-                        <Item key={item.id} name={item.name} stock={item.stock} price={item.price} description={item.description}
+                        <Item key={item.id} id={item.id} name={item.name} stock={item.stock} price={item.price} description={item.description}
                             image={item.image} />
                     )
                     : <p>Loading . . . </p>

@@ -4,10 +4,12 @@
   display: flex;
   align-items: center;
   border-bottom: 1px solid #000;
+  overflow: hidden;
 }
 
 .nav-title {
-  margin: 0;
+  text-decoration: none;
+  color: #000;
   flex-basis: 20%;
   transform: skewX(-20deg) scaleY(1.5);
 }

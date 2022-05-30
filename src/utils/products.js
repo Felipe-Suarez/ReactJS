@@ -6,6 +6,7 @@ export const products = [
         price: 11111,
         description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de ',
         image: 'https://www.pngmart.com/files/7/Sneakers-PNG-Picture.png',
+        category: 1,
     },
     {
         id: 2,
@@ -14,6 +15,7 @@ export const products = [
         price: 12222,
         description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de ',
         image: 'https://www.pngmart.com/files/7/Sneakers-PNG-Picture.png',
+        category: 2,
     },
     {
         id: 3,
@@ -22,6 +24,8 @@ export const products = [
         price: 13333,
         description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de ',
         image: 'https://www.pngmart.com/files/7/Sneakers-PNG-Picture.png',
+        category: 1,
+
     },
     {
         id: 4,
@@ -30,6 +34,7 @@ export const products = [
         price: 14444,
         description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de ',
         image: 'https://www.pngmart.com/files/7/Sneakers-PNG-Picture.png',
+        category: 1,
     },
     {
         id: 5,
@@ -38,6 +43,7 @@ export const products = [
         price: 15555,
         description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de ',
         image: 'https://www.pngmart.com/files/7/Sneakers-PNG-Picture.png',
+        category: 1,
     },
     {
         id: 6,
@@ -46,6 +52,7 @@ export const products = [
         price: 16666,
         description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de ',
         image: 'https://www.pngmart.com/files/7/Sneakers-PNG-Picture.png',
+        category: 2,
     },
     {
         id: 7,
@@ -54,6 +61,7 @@ export const products = [
         price: 17777,
         description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de ',
         image: 'https://www.pngmart.com/files/7/Sneakers-PNG-Picture.png',
+        category: 2,
     },
     {
         id: 8,
@@ -62,5 +70,6 @@ export const products = [
         price: 18888,
         description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de ',
         image: 'https://www.pngmart.com/files/7/Sneakers-PNG-Picture.png',
+        category: 2,
     }
 ]

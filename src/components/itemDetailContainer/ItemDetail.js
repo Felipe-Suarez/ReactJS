@@ -9,7 +9,7 @@ const onAdd = () => { //Item Count
 const ItemDetail = (props) => {
     const { key, name, stock, price, description, image } = props.items;
     return (
-        image ? <div className='item' >
+        image ? <div className='item-detail' >
             <span>{key}</span>
             <span>{name}: ${price}</span>
             <img className='item-img' src={image} alt={name} />
