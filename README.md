@@ -1,3 +1,5 @@
+Este proyecto esta hecho para el curso de reactJS de CODERHOUSE siguiendo las rubricas de evaluacion. El fin del proyecto es hacer un ecommerce de zapatillas, con todas las funcionalidades que se requiren. Se agrego la dependencia de react icons para el icono del carrito.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
