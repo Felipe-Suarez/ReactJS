@@ -3,7 +3,7 @@
   margin: 0 auto;
 }
 
-.item-container {
+.item-count-container {
   border: 1px solid #000;
   display: flex;
   justify-content: space-around;

@@ -60,6 +60,7 @@ nav ul li {
 .cart-icon {
   width: 25px;
   height: 25px;
+  color: #000;
 }
 
 .cart-num {

@@ -1,11 +1,12 @@
 import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 
 const CartWidget = () => {
     return (
         <div className="cart-widget">
             <div className='cart-container'>
-                <AiOutlineShoppingCart className='cart-icon' />
+                <Link to='/cart'><AiOutlineShoppingCart className='cart-icon' /></Link>
                 <span className="cart-num">4</span>
             </div>
         </div>
