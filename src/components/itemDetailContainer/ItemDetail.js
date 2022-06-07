@@ -1,16 +1,18 @@
-import React from 'react';
-import ItemCount from "../itemCount/ItemCount";
+import { useContext, useState } from 'react';
+import ItemCount from "./itemCount/ItemCount";
 import './itemDetail.css';
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ItemCart from './ItemCart';
+import { CartContext } from '../CartContext';
 
 const ItemDetail = (props) => {
     const { name, stock, price, description, image } = props.items;
+    const test = useContext(CartContext);
 
-    const onAdd = (value) => { //Item Count
-        alert(`Se agregaron ${value} productos`);
-        setCartState(value);
+    const onAdd = (qty) => { //Item Count
+        alert(`Se agregaron ${qty} productos`);
+        setCartState(qty);
+        test.addItem(props.items, qty);
     }
 
     const [cartState, setCartState] = useState(0);
@@ -28,7 +30,6 @@ const ItemDetail = (props) => {
                         <span className='item-price'>${price}</span>
                     </div>
                     <div>
-
                         <span className='item-stock'>Stock disponible: {stock}</span>
                         {cartState === 0 ?
                             <ItemCount stock={stock} initial={1} onAdd={onAdd} className='itemcount' />
@@ -38,7 +39,6 @@ const ItemDetail = (props) => {
                 </div>
             </div>
             : <p>Loading . . . </p>
-
     )
 }
 
