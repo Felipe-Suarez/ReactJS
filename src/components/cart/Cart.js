@@ -36,10 +36,10 @@ const Cart = () => {
                         <div className="order-container">
                             <div className="order">
                                 <h4>Resumen del pedido</h4>
-                                <span className="order-info">Total de items: {useCartcontext.cartQty()}</span>
-                                <span className="order-info">SubTotal: {useCartcontext.subTotal()}</span>
-                                <span className="order-info">IVA: {useCartcontext.IVA()}</span>
-                                <span className="order-info">Total: {useCartcontext.totalPrice()}</span>
+                                <span className="order-info">Cantidad de productos: {useCartcontext.cartQty()}</span>
+                                <span className="order-info">SubTotal: $ {useCartcontext.subTotal()}</span>
+                                <span className="order-info">IVA 21%: $ {useCartcontext.IVA()}</span>
+                                <span className="order-info">Total: $ {useCartcontext.totalPrice()}</span>
                                 <span className="order-buy-btn">Finalizar Compra!</span>
                             </div>
                         </div>

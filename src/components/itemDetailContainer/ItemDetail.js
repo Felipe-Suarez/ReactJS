@@ -21,8 +21,8 @@ const ItemDetail = (props) => {
         image ?
             <div className='item-detail-container'>
                 <div className='item-detail-left' >
-                    <img className='item-img' src={image} alt={name} />
-                    <p className='item-description'>{description}</p>
+                    <img className='item-detail-img' src={image} alt={name} />
+                    <p className='item-description'>Descripcion: <br /><br />{description}</p>
                 </div>
                 <div className='item-detail-right'>
                     <div>

@@ -1,11 +1,8 @@
-import React from "react";
-
 import ItemDetail from "./ItemDetail";
-
 import { useEffect, useState } from "react";
-import promiseFunction from "../../utils/promiseFunction";
-import { products } from '../../utils/products';
 import { useParams } from "react-router-dom";
+import db from '../../utils/firebaseConfig';
+import { doc, getDoc } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
 
@@ -13,8 +10,22 @@ const ItemDetailContainer = () => {
 
     const { id } = useParams();
 
+    const firebaseFetch = async (idItem) => {
+        const docRef = doc(db, "products", idItem);
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+            return {
+                id: idItem,
+                ...docSnap.data()
+            }
+        } else {
+            console.log("No such document!");
+        }
+    }
+
     useEffect(() => {
-        promiseFunction(2000, products.find(item => item.id === parseInt(id)))
+        firebaseFetch(id)
             .then(result => setProductsDetail(result))
             .catch(err => console.log(err))
     }, [id])
