@@ -1,10 +1,52 @@
+import { async } from "@firebase/util";
+import { collection, doc, increment, serverTimestamp, setDoc, updateDoc } from "firebase/firestore";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
+import db from "../../utils/firebaseConfig";
 import { CartContext } from "../CartContext";
 import './cart.css';
 
 const Cart = () => {
     const useCartcontext = useContext(CartContext);
+
+    const createOrder = () => {
+        const newOrder = useCartcontext.cartList.map(item => ({
+            id: item.id,
+            price: item.price,
+            title: item.name,
+            qty: item.quantity
+        }))
+
+        let dataOrder = {
+            buyer: {
+                name: 'Felipe',
+                email: 'felipeS@gmail.com',
+                phone: '12345667'
+            },
+            date: serverTimestamp(),
+            total: useCartcontext.totalPrice(),
+            items: newOrder
+        }
+
+        const pushOrder = async () => {
+            const collectionOrder = doc(collection(db, 'orders'));
+            await setDoc(collectionOrder, dataOrder);
+            return collectionOrder
+        }
+
+        pushOrder()
+            .then(result => alert(`Tu orden se realizo con exito! ID: ${result.id}`))
+            .catch(err => console.log(err))
+
+        useCartcontext.cartList.forEach(async element => {
+            const findItem = doc(db, 'products', element.id)
+            await updateDoc(findItem, {
+                stock: increment(-element.quantity)
+            })
+        });
+
+        useCartcontext.clear();
+    }
 
     return (
         <div className="cart-container">
@@ -40,7 +82,7 @@ const Cart = () => {
                                 <span className="order-info">SubTotal: $ {useCartcontext.subTotal()}</span>
                                 <span className="order-info">IVA 21%: $ {useCartcontext.IVA()}</span>
                                 <span className="order-info">Total: $ {useCartcontext.totalPrice()}</span>
-                                <span className="order-buy-btn">Finalizar Compra!</span>
+                                <span onClick={createOrder} className="order-buy-btn">Finalizar Compra!</span>
                             </div>
                         </div>
                     </>
