@@ -4,20 +4,31 @@ import './itemDetail.css';
 import { Link } from 'react-router-dom';
 import ItemCart from './ItemCart';
 import { CartContext } from '../CartContext';
+import Loader from '../loader/Loader';
 
 const ItemDetail = (props) => {
+
+    //destructuracion
     const { name, stock, price, description, image } = props.items;
+
+    //contexto
     const useCartcontext = useContext(CartContext);
 
+    //funcion para agregar un producto
     const onAdd = (qty) => { //Item Count
+        //mensaje de cantidad de productos
         alert(`Se agregaron ${qty} productos`);
+        //pasa al estado la cantidad
         setCartState(qty);
+        //pasa producto seleccionado y cantidad
         useCartcontext.addItem(props.items, qty);
     }
 
+    //estado de cantidad de producto
     const [cartState, setCartState] = useState(0);
 
     return (
+        //estructuracion del detalle que se muestra si la imagen existe
         image ?
             <div className='item-detail-container'>
                 <div className='item-detail-left' >
@@ -26,7 +37,7 @@ const ItemDetail = (props) => {
                 </div>
                 <div className='item-detail-right'>
                     <div>
-                        <h2 className='item-name'>{name}</h2>
+                        <h1 className='item-name'>{name}</h1>
                         <span className='item-price'>${price}</span>
                     </div>
                     <div>
@@ -38,7 +49,9 @@ const ItemDetail = (props) => {
                     </div>
                 </div>
             </div>
-            : <p>Loading . . . </p>
+            //si no carga se muestra un loader
+            : <Loader />
+
     )
 }
 

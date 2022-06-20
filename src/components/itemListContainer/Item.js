@@ -1,9 +1,10 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Item = (props) => {
+    //destructuracion
     const { id, name, price, image } = props;
     return (
+        //estructuracion del producto
         <div style={{ position: 'relative' }}>
             <div className='item'>
                 <span>{name}: ${price}</span>

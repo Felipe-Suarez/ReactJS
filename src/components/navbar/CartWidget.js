@@ -12,6 +12,7 @@ const CartWidget = () => {
             <div className='cart-container'>
                 <Link to='/cart'><AiOutlineShoppingCart className='cart-icon' /></Link>
                 {
+                    //muestra el widget al agregarse mas de un producto 
                     useCartcontext.cartList.length > 0 &&
                     <span className="cart-num">{useCartcontext.cartQty()}</span>
                 }

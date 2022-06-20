@@ -1,25 +1,17 @@
 .item-count {
-  width: 150px;
+  width: 200px;
   margin: 0 auto;
 }
 
 .item-count-container {
-  border: 1px solid #000;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
   display: flex;
   justify-content: space-around;
-  padding: 5px 0;
+  padding: 10px 0;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-}
-
-.add-on {
-  background-color: #000;
-  color: #fff;
-  display: block;
-  cursor: pointer;
-  padding: 5px 0;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
 }
 
 .increment-btn,
@@ -27,4 +19,70 @@
   display: block;
   width: 30px;
   cursor: pointer;
+  color: #090909;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+.increment-btn:active,
+.decrement-btn:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.add-on {
+  display: block;
+  cursor: pointer;
+  --color: #000;
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.2s;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+}
+
+.add-on::before,
+.add-on::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 0.5s ease;
+}
+
+.add-on::before {
+  top: -1em;
+  left: -1em;
+}
+
+.add-on::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+
+.add-on:hover::before,
+.add-on:hover::after {
+  height: 410px;
+  width: 410px;
+}
+
+.add-on:hover {
+  color: #fff;
+}
+
+.add-on:active {
+  filter: brightness(0.8);
 }
