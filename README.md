@@ -1,72 +1,37 @@
-Este proyecto esta hecho para el curso de reactJS de CODERHOUSE siguiendo las rubricas de evaluacion. El fin del proyecto es hacer un ecommerce de zapatillas, con todas las funcionalidades que se requiren. Se agrego la dependencia de react icons para el icono del carrito.
+# UProtein
 
-# Getting Started with Create React App
+_El proyecto fue hecho durante el curso de reactJS de coderhouse y fue presentado como proyecto final, el cual cumple con los objetivos propuestos. Se trata de un ecommerce de suplementos deportivos, con el objetivo de traer productos de una base de datos y renderizarlos en la pantalla de diversas maneras. Tambien cuenta con la funcion de agregar al carrito, sumando la cantidad y precios para finalizar mostrando los totales. Al finalizar la compra se guarda una orden y se resta stock en la base de datos._
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Comenzando 🚀
 
-## Available Scripts
+_Lo puedes forkear para tener una copia en tu repositorio de GitHub o bajarte el archivo en formato ZIP para tener una copia de manera local._
 
-In the project directory, you can run:
+## Despliegue 📦
 
-### `npm start`
+Mira **Deployment** para ver el proyecto en funcionamiento proyecto.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Construido con 🛠️
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+_Menciona las herramientas que utilizaste para crear tu proyecto_
 
-### `npm test`
+- [HTML](https://developer.mozilla.org/es/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/es/docs/Web/CSS)
+- [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [AlertifyJS](https://alertifyjs.com/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Autores ✒️
 
-### `npm run build`
+- **Felipe Suarez** - _Front-end Developer_ - [Feliisuarez](https://github.com/Feliisuarez)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Licencia 📄
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Libre licencia. Puedes analizar/estudiar/forkear/copiar/mejorar este proyecto. Se agradecerá citar esta fuente cuando uses este proyecto.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Expresiones de Gratitud 🎁
 
-### `npm run eject`
+- Curso de coderhouse 📢
+- Profesor Alex Marin Mendez.
+- Tutor Rodrigo collins.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---

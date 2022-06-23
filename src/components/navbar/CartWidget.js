@@ -9,7 +9,7 @@ const CartWidget = () => {
 
     return (
         <div className="cart-widget">
-            <div className='cart-container'>
+            <div className='cart-container-icon'>
                 <Link to='/cart'><AiOutlineShoppingCart className='cart-icon' /></Link>
                 {
                     //muestra el widget al agregarse mas de un producto 

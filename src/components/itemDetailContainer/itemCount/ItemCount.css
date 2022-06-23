@@ -1,17 +1,21 @@
 .item-count {
   width: 200px;
   margin: 0 auto;
+  --dm-on: #000;
+  --dm-off: #fff;
 }
 
 .item-count-container {
-  border-top: 1px solid #000;
-  border-left: 1px solid #000;
-  border-right: 1px solid #000;
+  border-top: 1px solid var(--dm-on);
+  border-left: 1px solid var(--dm-on);
+  border-right: 1px solid var(--dm-on);
   display: flex;
   justify-content: space-around;
   padding: 10px 0;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
+  background-color: #77acf1aa;
+  color: #fff;
 }
 
 .increment-btn,
@@ -19,27 +23,26 @@
   display: block;
   width: 30px;
   cursor: pointer;
-  color: #090909;
+  color: #000;
   font-size: 18px;
   border-radius: 0.5em;
   background: #e8e8e8;
   border: 1px solid #e8e8e8;
   transition: all 0.3s;
-  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
 }
 
 .increment-btn:active,
 .decrement-btn:active {
   color: #666;
-  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #fff;
 }
 
 .add-on {
+  background-color: #0002;
   display: block;
   cursor: pointer;
-  --color: #000;
+  --color: var(--dm-on);
   padding: 0.8em 1.7em;
-  background-color: transparent;
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -80,9 +83,14 @@
 }
 
 .add-on:hover {
-  color: #fff;
+  color: var(--dm-off);
 }
 
 .add-on:active {
   filter: brightness(0.8);
+}
+
+body.dark .item-count {
+  --dm-on: #fff;
+  --dm-off: #000;
 }

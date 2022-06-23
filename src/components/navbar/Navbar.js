@@ -2,6 +2,10 @@ import CartWidget from './CartWidget';
 import './navbar.css';
 import { Link } from 'react-router-dom';
 
+const darkMode = () => {
+    document.body.classList.toggle('dark');
+}
+
 const Navbar = () => {
     return (
         <nav className='nav-container'>
@@ -12,9 +16,13 @@ const Navbar = () => {
             <ul className='nav-list'>
                 <li><Link className='nav-item' to='/category/1' >Proteinas</Link></li>
                 <li><Link className='nav-item' to='/category/2' >Creatinas</Link></li>
-                <li><Link className='nav-item' to='/sobreDe' >Sobre de</Link></li>
-                <li><Link className='nav-item' to='/ubicacion' >Ubicacion</Link></li>
+                <li><Link className='nav-item' to='/about' >Sobre de</Link></li>
+                <li><Link className='nav-item' to='/ubication' >Ubicacion</Link></li>
             </ul>
+            <label className="switch">
+                <input onClick={darkMode} type="checkbox"></input>
+                <span className="slider"></span>
+            </label>
             <CartWidget />
         </nav>
     );

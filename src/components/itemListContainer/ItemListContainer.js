@@ -8,15 +8,19 @@ import db from '../../utils/firebaseConfig';
 const firebaseFetch = async (categoryId) => {
     let q;
     if (categoryId) {
+
         //productos filtrados
         q = query(collection(db, 'products'), where('category', '==', parseInt(categoryId)));
     } else {
+
         //todos los productos
         q = query(collection(db, 'products'));
     }
+
     //trae los documentos de la coleccion
     const querySnapshot = await getDocs(q);
     //por cada documento creo un objeto y lo retorno
+
     const dataFirebase = querySnapshot.docs.map(doc => ({
         id: doc.id,
         ...doc.data()
@@ -35,16 +39,21 @@ const ItemListContainer = ({ greeting }) => {
 
     //el codigo se ejecuta cada vez que se actualiza categoryId
     useEffect(() => {
+
         //pide productos
         firebaseFetch(categoryId)
+
             //si se cumple los establece al estado
             .then(result => setProductsList(result))
+
             //si no se cumple muestra el error
             .catch(err => console.log(err))
+
     }, [categoryId])
 
     //variable para mostrar la categoria en el DOM
     let categoryName = categoryId;
+
     //si no hay categoria se borra el undefined
     if (!categoryName) {
         categoryName = '';

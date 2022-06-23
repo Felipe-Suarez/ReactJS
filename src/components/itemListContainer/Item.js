@@ -7,7 +7,10 @@ const Item = (props) => {
         //estructuracion del producto
         <div style={{ position: 'relative' }}>
             <div className='item'>
-                <span>{name}: ${price}</span>
+                <span>{name}</span>
+                <div>
+                    <span className='price-icon'>$ </span>{price}
+                </div>
                 <img className='item-list-img' src={image} alt={name} />
             </div>
             <Link to={`/item/${id}`}><button className='item-list-detail'>Detalle</button></Link>

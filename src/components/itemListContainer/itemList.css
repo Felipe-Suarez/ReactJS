@@ -2,7 +2,28 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
+  background-color: var(--dm-off);
+  --dm-on: #000;
+  --dm-off: #fff;
+}
+
+h1 {
+  margin: 0;
+  padding: 10px 0;
+  background-image: linear-gradient(to right, #77acf1aa, #fff, #77acf1aa, #fff, #77acf1aa);
+  background-position: 0;
+  animation: title 10s linear normal infinite;
+  background-size: 300%;
+}
+
+@keyframes title {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 300vw;
+  }
 }
 
 .item {
@@ -12,37 +33,54 @@
   justify-content: space-between;
   width: 25vw;
   height: 50vh;
-  border-top: 2px solid #000;
-  border-left: 2px solid #000;
-  border-right: 2px solid #000;
+  border-top: 2px double var(--dm-on);
+  border-left: 2px double var(--dm-on);
+  border-right: 2px double var(--dm-on);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: #0002;
   padding: 10px;
   margin: 40px 20px;
   position: relative;
+  color: var(--dm-on);
 }
 
 .item-list-img {
   width: 50%;
   height: 100%;
   object-fit: scale-down;
+  filter: drop-shadow(5px 5px 1px #000a);
+  transition: all 0.2s;
+}
+
+.item-list-img:hover {
+  width: 60%;
+  filter: drop-shadow(0 0 1px #000a);
 }
 
 .item-list-detail {
   padding: 0.8em 1.8em;
-  border: 2px solid #000;
+  border: 2px solid var(--dm-on);
   overflow: hidden;
-  background-color: transparent;
+  background-color: #77acf1;
+  filter: grayscale(0.3);
   text-align: center;
   text-transform: uppercase;
   font-size: 16px;
   transition: 0.3s;
   z-index: 1;
   font-family: inherit;
-  color: #000;
+  color: var(--dm-on);
   position: absolute;
   bottom: -30px;
   left: 0;
   right: 0;
   margin: 20px;
+}
+
+.price-icon {
+  color: #82ffc9;
+  text-shadow: 0.5px 0.5px 2px #000;
 }
 
 .item-list-detail::before {
@@ -53,7 +91,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
-  background: #000;
+  background: var(--dm-on);
   transition: 0.5s ease;
   display: block;
   z-index: -1;
@@ -64,5 +102,15 @@
 }
 
 .item-list-detail:hover {
+  color: var(--dm-off);
+}
+
+body.dark .item-list-container {
+  --dm-on: #fff;
+  --dm-off: #000d;
+}
+
+body.dark h1 {
+  background-image: linear-gradient(to right, #77acf1aa, #000, #77acf1aa, #000, #77acf1aa);
   color: #fff;
 }

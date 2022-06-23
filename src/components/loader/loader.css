@@ -51,3 +51,7 @@
     transform: translateY(-10px);
   }
 }
+
+body.dark .spinner {
+  color: #fff;
+}

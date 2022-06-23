@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import ItemCart from './ItemCart';
 import { CartContext } from '../CartContext';
 import Loader from '../loader/Loader';
+import alertify from "alertifyjs";
+import 'alertifyjs/build/css/alertify.css';
 
 const ItemDetail = (props) => {
 
@@ -14,20 +16,37 @@ const ItemDetail = (props) => {
     //contexto
     const useCartcontext = useContext(CartContext);
 
+    //funcion que evita agregar mas productos de los que hay
+    const actualStock = () => {
+        if (!useCartcontext.isInCart(props.items)) {
+            return stock
+        } else {
+            return stock - useCartcontext.isInCart(props.items).quantity
+        }
+    }
+
     //funcion para agregar un producto
+
     const onAdd = (qty) => { //Item Count
-        //mensaje de cantidad de productos
-        alert(`Se agregaron ${qty} productos`);
-        //pasa al estado la cantidad
-        setCartState(qty);
-        //pasa producto seleccionado y cantidad
-        useCartcontext.addItem(props.items, qty);
+
+        if (stock > 0 && qty > 0) {//si no hay sotck no se muestra la alarma
+
+            //mensaje de cantidad de productos
+            alertify.alert(`Se agregaron ${qty} productos`).set('movable', false)
+
+            //pasa al estado la cantidad
+            setCartState(qty);
+
+            //pasa producto seleccionado y cantidad
+            useCartcontext.addItem(props.items, qty);
+        }
     }
 
     //estado de cantidad de producto
     const [cartState, setCartState] = useState(0);
 
     return (
+
         //estructuracion del detalle que se muestra si la imagen existe
         image ?
             <div className='item-detail-container'>
@@ -41,14 +60,17 @@ const ItemDetail = (props) => {
                         <span className='item-price'>${price}</span>
                     </div>
                     <div>
-                        <span className='item-stock'>Stock disponible: {stock}</span>
+                        {stock === 0 ?
+                            <span className='item-stock'>Stock no disponible</span>
+                            : <span className='item-stock'>Stock disponible: {actualStock()}</span>}
                         {cartState === 0 ?
-                            <ItemCount stock={stock} initial={1} onAdd={onAdd} className='itemcount' />
+                            <ItemCount stock={actualStock()} initial={0} onAdd={onAdd} className='itemcount' />
                             : <Link to='/cart'><ItemCart /></Link>
                         }
                     </div>
                 </div>
             </div>
+
             //si no carga se muestra un loader
             : <Loader />
 
