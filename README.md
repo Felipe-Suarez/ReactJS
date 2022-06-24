@@ -8,7 +8,7 @@ _Lo puedes forkear para tener una copia en tu repositorio de GitHub o bajarte el
 
 ## Despliegue 📦
 
-Mira [https://uprotein.netlify.app/](https://uprotein.netlify.app/) para ver el proyecto en funcionamiento proyecto.
+Mira [https://uprotein.netlify.app/](https://uprotein.netlify.app/) para ver el proyecto en funcionamiento.
 
 ## Construido con 🛠️
 
