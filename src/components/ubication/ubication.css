@@ -8,7 +8,7 @@
 }
 
 .map-title {
-  height: 10vh;
+  margin-bottom: 40px;
 }
 
 .map-container::after {

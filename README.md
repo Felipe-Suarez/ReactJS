@@ -8,19 +8,18 @@ _Lo puedes forkear para tener una copia en tu repositorio de GitHub o bajarte el
 
 ## Despliegue 📦
 
-Mira [https://uprotein.netlify.app/](https://github.com/Feliisuarez) para ver el proyecto en funcionamiento proyecto.
+Mira [https://uprotein.netlify.app/](https://uprotein.netlify.app/) para ver el proyecto en funcionamiento proyecto.
 
 ## Construido con 🛠️
-
-_Menciona las herramientas que utilizaste para crear tu proyecto_
 
 - [HTML](https://developer.mozilla.org/es/docs/Web/HTML)
 - [CSS](https://developer.mozilla.org/es/docs/Web/CSS)
 - [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript)
+- [ReactJS](https://es.reactjs.org/)
 - [React Icons](https://react-icons.github.io/react-icons/)
 - [AlertifyJS](https://alertifyjs.com/)
 
-## Autores ✒️
+## Autor ✒️
 
 - **Felipe Suarez** - _Front-end Developer_ - [Feliisuarez](https://github.com/Feliisuarez)
 

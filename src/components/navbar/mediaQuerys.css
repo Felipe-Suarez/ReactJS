@@ -32,7 +32,7 @@
   }
 
   .nav-title {
-    font-size: 4vh;
+    font-size: 30px;
   }
 
   .nav-item {
@@ -45,7 +45,7 @@
     width: 100vw;
     height: 90vh;
     flex-direction: column;
-    background-color: #77acf1aa;
+    background-color: #000a;
     justify-content: space-evenly;
     position: absolute;
     top: 10vh;
@@ -53,12 +53,13 @@
     transform: translateY(-110%);
   }
 
-  .nav-item {
-    width: 80%;
-  }
-
   .show {
     transform: translateY(0);
+  }
+
+  .nav-item {
+    width: 70%;
+    color: #fff;
   }
 
   .cart-widget {
@@ -73,8 +74,8 @@
 
   .nav-menu-icon {
     pointer-events: none;
-    width: 10vw;
-    height: 10vw;
+    width: 40px;
+    height: 40px;
   }
 
   .nav-menu-btn {
@@ -84,7 +85,7 @@
     color: #000;
   }
 
-  .nav-menu-btn:hover {
+  .nav-menu-btn:active {
     color: #f00;
   }
 
