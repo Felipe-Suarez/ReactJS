@@ -1,0 +1,36 @@
+@media screen and (max-width: 800px) {
+  .about {
+    flex-direction: column;
+  }
+
+  .about-img-container {
+    flex-basis: 100%;
+    margin: 15vh 10%;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .about-info {
+    flex-basis: 100%;
+    margin: 0 5% 10%;
+  }
+
+  .about-title {
+    padding: 0;
+    width: 100%;
+  }
+
+  .about-info {
+    margin: 20px;
+  }
+
+  .about-text {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about-img-container {
+    margin: 15vh 10% 0;
+  }
+}

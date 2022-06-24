@@ -8,6 +8,7 @@ import { MdDelete } from 'react-icons/md';
 import { BsFillCartXFill, BsFillArrowLeftCircleFill } from 'react-icons/bs';
 import alertify from "alertifyjs";
 import 'alertifyjs/build/css/alertify.css';
+import './mediaQuerys.css';
 
 const Cart = () => {
 
@@ -97,6 +98,7 @@ const Cart = () => {
                     </>
 
                     : <> {/*si el carrito no esta vacio*/}
+
                         {/*boton para vaciar carrito*/}
                         <button className="cart-delete" onClick={useCartcontext.clear}>
                             <BsFillCartXFill className="cart-delete-icon" />
@@ -108,9 +110,9 @@ const Cart = () => {
                             useCartcontext.cartList.map(item =>
                                 <div key={item.id} className='cart-item'>
                                     <img className='cart-item-img' src={item.image} alt={item.name} />
-                                    <span>{item.name}</span>
-                                    <span>Cantidad: {item.quantity}</span>
-                                    <span>${item.price}</span>
+                                    <span className="cart-item-info">{item.name}</span>
+                                    <span className="cart-item-info">Cantidad: {item.quantity}</span>
+                                    <span className="cart-item-info">${item.price}</span>
                                     <button className="remove-btn" onClick={() => { useCartcontext.removeItem(item.id) }}><MdDelete /></button>
                                 </div>
                             )}

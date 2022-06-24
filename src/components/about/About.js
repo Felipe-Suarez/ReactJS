@@ -1,4 +1,5 @@
 import './about.css';
+import './mediaQuerys.css'
 
 const About = () => {
     return (

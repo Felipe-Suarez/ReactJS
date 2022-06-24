@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import db from '../../utils/firebaseConfig';
+import './mediaQuerys.css';
 
 //fetch que pide a firestore los productos
 const firebaseFetch = async (categoryId) => {

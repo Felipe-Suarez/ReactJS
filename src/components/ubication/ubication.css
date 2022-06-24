@@ -4,6 +4,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #fff;
+  position: relative;
 }
 
 .map-title {
@@ -16,8 +17,8 @@
   height: 80px;
   background-color: #000;
   position: absolute;
-  bottom: -15vh;
-  left: 5vw;
+  bottom: 5px;
+  left: calc(5vw - 3px);
   border-top-right-radius: 50%;
 }
 

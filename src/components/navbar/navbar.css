@@ -15,10 +15,9 @@
   --border-right: 6px;
   --text-stroke-color: var(--dm-on);
   --animation-color: var(--dm-on);
-  --fs-size: 2em;
   letter-spacing: 3px;
   text-decoration: none;
-  font-size: var(--fs-size);
+  font-size: 5vh;
   font-family: "Arial";
   position: relative;
   color: transparent;
@@ -47,20 +46,25 @@
 /*Title end*/
 
 .nav-list {
-  flex-basis: 70%;
+  flex-basis: 60%;
   display: flex;
   justify-content: space-around;
   overflow: hidden;
 }
 
+.nav-menu-btn {
+  display: none;
+}
+
 /*category btn*/
 
 .nav-item {
+  font-size: 2.5vh;
   background-color: #77acf1aa;
   display: inline-block;
   padding: 5px 15px;
   border: 1px solid #4f4f4f;
-  border-radius: 4px;
+  border-radius: 10px;
   transition: all 0.2s ease-in;
   position: relative;
   overflow: hidden;
@@ -111,8 +115,8 @@ ul li {
 }
 
 .cart-icon {
-  width: 25px;
-  height: 25px;
+  width: 5vh;
+  height: 5vh;
   color: var(--dm-on);
 }
 
@@ -123,11 +127,11 @@ ul li {
 /*Cart number widget*/
 
 .cart-num {
-  font-size: 14px;
+  font-size: 2vh;
   display: flex;
   justify-content: center;
-  width: 20px;
-  height: 20px;
+  width: 3vh;
+  height: 3vh;
   background-color: #1bfd9c;
   border-radius: 50%;
   position: absolute;
@@ -178,11 +182,12 @@ ul li {
 
 /*dark mode*/
 .switch {
+  flex-basis: 10%;
   font-size: 17px;
   position: relative;
   display: inline-block;
-  width: 5vw;
-  height: 6vh;
+  max-width: 80px;
+  height: 30px;
 }
 
 .switch input {
@@ -206,8 +211,8 @@ ul li {
 .slider:before {
   position: absolute;
   content: "";
-  height: 4vh;
-  width: 4vh;
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
   left: 10%;
   bottom: 15%;
@@ -221,7 +226,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  transform: translateX(100%);
+  transform: translateX(45px);
   box-shadow: inset 15px -4px 0px 15px #fff000;
 }
 

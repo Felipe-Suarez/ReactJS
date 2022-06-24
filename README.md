@@ -1,6 +1,6 @@
 # UProtein
 
-_El proyecto fue hecho durante el curso de reactJS de coderhouse y fue presentado como proyecto final, el cual cumple con los objetivos propuestos. Se trata de un ecommerce de suplementos deportivos, con el objetivo de traer productos de una base de datos y renderizarlos en la pantalla de diversas maneras. Tambien cuenta con la funcion de agregar al carrito, sumando la cantidad y precios para finalizar mostrando los totales. Al finalizar la compra se guarda una orden y se resta stock en la base de datos._
+_El proyecto fue hecho durante el curso de reactJS de coderhouse y fue presentado como proyecto final, el cual cumple con los objetivos propuestos. Se trata de una aplicacion web de un ecommerce de suplementos deportivos, con el objetivo de traer productos de una base de datos y renderizarlos en la pantalla de diversas maneras. Tambien cuenta con la funcion de agregar al carrito, sumando la cantidad y precios para finalizar mostrando los totales. Al finalizar la compra se guarda una orden y se resta stock en la base de datos._
 
 ## Comenzando 🚀
 
@@ -8,7 +8,7 @@ _Lo puedes forkear para tener una copia en tu repositorio de GitHub o bajarte el
 
 ## Despliegue 📦
 
-Mira **Deployment** para ver el proyecto en funcionamiento proyecto.
+Mira [https://uprotein.netlify.app/](https://github.com/Feliisuarez) para ver el proyecto en funcionamiento proyecto.
 
 ## Construido con 🛠️
 

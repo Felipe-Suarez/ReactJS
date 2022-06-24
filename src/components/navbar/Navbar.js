@@ -1,9 +1,22 @@
 import CartWidget from './CartWidget';
 import './navbar.css';
 import { Link } from 'react-router-dom';
+import './mediaQuerys.css'
+import { CgMenuRound } from 'react-icons/cg'
 
 const darkMode = () => {
     document.body.classList.toggle('dark');
+}
+
+const menu = (e) => {
+    let menu = e.target.previousElementSibling;
+    menu.classList.toggle('show');
+    if (menu.classList.contains('show')) {
+        document.body.style = 'overflow: hidden'
+
+    } else {
+        document.body.style = 'overflow: unset'
+    }
 }
 
 const Navbar = () => {
@@ -19,12 +32,13 @@ const Navbar = () => {
                 <li><Link className='nav-item' to='/about' >Sobre de</Link></li>
                 <li><Link className='nav-item' to='/ubication' >Ubicacion</Link></li>
             </ul>
+            <span onClick={(e) => menu(e)} className='nav-menu-btn'><CgMenuRound className='nav-menu-icon' /></span>
             <label className="switch">
                 <input onClick={darkMode} type="checkbox"></input>
                 <span className="slider"></span>
             </label>
             <CartWidget />
-        </nav>
+        </nav >
     );
 }
 

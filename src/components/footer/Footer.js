@@ -4,6 +4,7 @@ import { FaFacebookF } from 'react-icons/fa'
 import { GrMail } from 'react-icons/gr'
 import BtnSend from './BtnSend';
 import InputText from './InputText';
+import './mediaQuerys.css'
 
 const Footer = () => {
     return (
@@ -13,13 +14,13 @@ const Footer = () => {
                     <h4 className='footer-subtitle'>Seguinos en nuestras redes!</h4>
                     <ul className='footer-list'>
                         <li>
-                            <a className='social-link' href='https://www.youtube.com/' target='_blank'><AiFillYoutube className='social-icon' /></a>
+                            <a className='social-link' href='https://www.youtube.com/' target='_blank' rel="noopener noreferrer"><AiFillYoutube className='social-icon' /></a>
                         </li>
                         <li>
-                            <a className='social-link' href='https://www.instagram.com/?hl=es' target='_blank'><AiFillInstagram className='social-icon' /></a>
+                            <a className='social-link' href='https://www.instagram.com/?hl=es' target='_blank' rel="noopener noreferrer"><AiFillInstagram className='social-icon' /></a>
                         </li>
                         <li>
-                            <a className='social-link' href='https://www.facebook.com/' target='_blank'><FaFacebookF className='social-icon' /></a>
+                            <a className='social-link' href='https://www.facebook.com/' target='_blank' rel="noopener noreferrer"><FaFacebookF className='social-icon' /></a>
                         </li>
                     </ul>
                 </div>
