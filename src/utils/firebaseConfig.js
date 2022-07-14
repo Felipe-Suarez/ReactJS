@@ -4,12 +4,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyAOPgcijb5wMcbWAPJ5b3rPj1Q-8mOsm08",
-    authDomain: "suarez-ecommerce.firebaseapp.com",
+    apiKey: process.env.FIREBASE_API_KEY,
+    authDomain: process.env.FIREBASE_AUTH_DOMAIN,
     projectId: "suarez-ecommerce",
-    storageBucket: "suarez-ecommerce.appspot.com",
-    messagingSenderId: "782255093729",
-    appId: "1:782255093729:web:b5ccb10a37f2a38eb2c4a0"
+    storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.FIREBASE_APP_ID
 };
 
 // Initialize Firebase
