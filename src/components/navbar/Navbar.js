@@ -38,8 +38,8 @@ const Navbar = () => {
             </Link>
             <span className='nav-menu-btn'><CgMenuRound className='nav-menu-icon' /></span>
             <ul className='nav-list'>
-                <li><Link className='nav-item' to='/category/1' >Proteinas</Link></li>
-                <li><Link className='nav-item' to='/category/2' >Creatinas</Link></li>
+                <li><Link className='nav-item' to='/category/Proteinas' >Proteinas</Link></li>
+                <li><Link className='nav-item' to='/category/Creatinas' >Creatinas</Link></li>
                 <li><Link className='nav-item' to='/about' >Sobre de</Link></li>
                 <li><Link className='nav-item' to='/ubication' >Ubicacion</Link></li>
             </ul>

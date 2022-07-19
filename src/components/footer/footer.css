@@ -40,7 +40,7 @@
 }
 
 .social-icon:hover {
-  border-bottom: 10px solid var(--dm-off);
+  border-bottom: 5px solid var(--dm-off);
   transform: translateY(-5px);
   color: var(--dm-on);
   filter: drop-shadow(0 3px 1px var(--dm-off));

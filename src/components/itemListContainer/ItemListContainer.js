@@ -11,7 +11,7 @@ const firebaseFetch = async (categoryId) => {
     if (categoryId) {
 
         //productos filtrados
-        q = query(collection(db, 'products'), where('category', '==', parseInt(categoryId)));
+        q = query(collection(db, 'products'), where('category', '==', categoryId));
     } else {
 
         //todos los productos
@@ -30,7 +30,7 @@ const firebaseFetch = async (categoryId) => {
 }
 
 //componente
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
 
     //estado de la lista de productos
     const [productsList, setProductsList] = useState([]);
@@ -57,12 +57,12 @@ const ItemListContainer = ({ greeting }) => {
 
     //si no hay categoria se borra el undefined
     if (!categoryName) {
-        categoryName = '';
+        categoryName = 'Bienvenido a nuestra pagina web!';
     }
 
     return (
         <>
-            <h1>{greeting + ' ' + categoryName}</h1>
+            <h1>{categoryName}</h1>
             <ItemList items={productsList} />
         </>
     )
