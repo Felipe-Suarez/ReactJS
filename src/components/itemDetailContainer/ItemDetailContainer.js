@@ -1,6 +1,6 @@
 import ItemDetail from "./ItemDetail";
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import db from '../../utils/firebaseConfig';
 import { doc, getDoc } from "firebase/firestore";
 import alertify from "alertifyjs";
@@ -34,8 +34,6 @@ const ItemDetailContainer = () => {
     //id de la ruta
     const { id } = useParams();
 
-    let navigate = useNavigate();
-
     //se ejecuta el fetch cada vez que se cambia el id de la ruta
     useEffect(() => {
 
@@ -49,7 +47,6 @@ const ItemDetailContainer = () => {
                 } else {
                     alertify.alert('Oop! No hemos podido encontrar tu producto')
                         .set('movable', false);
-                    navigate('/');
                 }
             })
 
