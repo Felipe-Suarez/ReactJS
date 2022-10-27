@@ -1,11 +1,13 @@
 import './about.css';
 import './mediaQuerys.css'
 
+import img from '../../assets/imgs/local.jpg'
+
 const About = () => {
     return (
         <div className='about'>
             <div className='about-img-container'>
-                <img className='about-img' alt='local' src='https://lh3.googleusercontent.com/proxy/X5-b3cF6F2_b-JFeXa9YRDWhLQeqfaaN4VJN1THOsemMhRTQ2SsKyfwVivtuwpKZipaeysH7xzDrqxvBiNTKDVeqxGLENlhMH7_KU9CFWscSIEElJS-E88LCah_WeSZbi8Ch1Xwya7uaz1SNva6xdhBOxmqqiJKJH74tdlbkZ4MsJXyw=w768-h768-n-o-k-v1' />
+                <img className='about-img' alt='local' src={img} />
             </div>
             <div className='about-info'>
                 <h1 className='about-title'>Sobre nosotros</h1>

@@ -41,3 +41,7 @@
   background-color: #77acf1aa;
   color: #fff;
 }
+
+* {
+  box-sizing: border-box;
+}
